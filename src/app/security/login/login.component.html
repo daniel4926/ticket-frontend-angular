@@ -1,0 +1,54 @@
+<div class="login-container">
+  <div style="justify-content: center;">
+    <div class="background-image">
+      <img
+        src="../../../assets/img/logo-delpz-bl.png"
+        alt="Fondo"
+        class="background-img"
+      />
+    </div>
+    <div class="login-card">
+      <span class="font-medium align-items-center justify-content-center"> <h1> ETICKET </h1> </span>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="username"
+            >Usuario
+            <input
+              matInput
+              type="text"
+              formControlName="username"
+              name="username"
+              required
+              class="full-width-input"
+            />
+            <span class="username-icon"> <i class="pi pi-user"></i> </span>
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="password">Contraseña
+          <input
+          matInput
+          type="password"
+          formControlName="password"
+          name="password"
+          required
+          class="full-width-input"
+          id="passwordField"
+          />
+          <span class="password-toggle-icon" (click)="togglePasswordVisibility()">
+            <i [class]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'"></i>
+          </span>
+        </label>
+        </div>
+        <button mat-raised-button color="primary" type="submit">
+          Iniciar Sesión
+        </button>
+      </form>
+    </div>
+
+
+
+
+  </div>
+
+</div>

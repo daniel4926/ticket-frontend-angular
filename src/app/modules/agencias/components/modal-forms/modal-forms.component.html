@@ -1,0 +1,53 @@
+<p-toast></p-toast>
+<form [formGroup]="formAgencia">
+    <div class="grid">
+        <div class="col-12">
+            <p-dialog [(visible)]="dialog" [style]="{width: '50vw'}" header={{titleForm}} [modal]="true"
+                class="p-fluid">
+                <ng-template pTemplate="content">
+                    <div hidden class="form-group field">
+                        <input type="text" pInputText id="id" formControlName="id" />
+                    </div>
+                    <div class="form-group field">
+                        <label for="codigo">Codigo</label>
+                        <input type="text" pInputText id="codigo" required autofocus
+                            [ngClass]="{'ng-invalid ng-dirty' : submitted && formAgencia.controls['codigo'].invalid}"
+                            formControlName="codigo" />
+                        <div *ngIf="submitted && formAgencia.controls['codigo'].invalid">
+                            <small class="p-error"
+                            *ngIf="formAgencia.get('codigo')?.hasError('required')">{{messages.requiredField}}</small>
+                        </div>
+                    </div>
+                    <div class="form-group field">
+                        <label for="descripcion">Descripcion</label>
+                        <textarea id="descripcion" pInputTextarea rows="3" cols="20" formControlName="descripcion"></textarea>
+                        <div *ngIf="submitted && formAgencia.controls['descripcion'].invalid">
+                            <small class="p-error"
+                            *ngIf="formAgencia.get('descripcion')?.hasError('required')">{{messages.requiredField}}</small>
+                        </div>
+                    </div>
+                    <div class="form-group field">
+                      <label for="direccion">Direccion</label>
+                      <textarea id="direccion" pInputTextarea rows="3" cols="20" formControlName="direccion"></textarea>
+                      <div *ngIf="submitted && formAgencia.controls['direccion'].invalid">
+                          <small class="p-error"
+                          *ngIf="formAgencia.get('direccion')?.hasError('required')">{{messages.requiredField}}</small>
+                      </div>
+                  </div>
+                  <div formArrayName="tipoTicket">
+                    <div *ngFor="let tipoTicket of tipoTickets; let i = index">
+                      <input type="checkbox" [formControlName]="i" (change)="onTipoTicketChange(i, $event)">
+                      {{ tipoTicket.descripcion }}
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                    <button pButton pRipple [label]="buttons.cancel" icon="pi pi-times"
+                        class="p-button-secondary p-button-rounded mr-2" (click)="openDialog(false,false)"></button>
+                    <button pButton pRipple [label]="buttons.save" icon="pi pi-check" class="p-button-rounded mr-2"
+                        (click)="save()"></button>
+                </ng-template>
+            </p-dialog>
+        </div>
+    </div>
+</form>

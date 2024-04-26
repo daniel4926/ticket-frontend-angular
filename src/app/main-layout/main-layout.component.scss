@@ -1,0 +1,34 @@
+
+
+.container {
+display: flex;
+flex-direction: column;
+height: 100vh;
+}
+
+.layout-main-container {
+flex: 1;
+display: flex;
+}
+
+.layout-content {
+flex: 1;
+display: flex;
+}
+
+.content {
+flex: 1;
+padding: 20px;
+}
+
+.sider-menu {
+width: 200px;
+min-width: 200px;
+background-color: #333;
+color: #fff;
+}
+
+.app-header,
+.app-footer {
+flex: 0 0 auto
+}

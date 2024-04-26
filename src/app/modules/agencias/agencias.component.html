@@ -1,0 +1,48 @@
+<section class="agencias">
+
+  <app-toolbar></app-toolbar>
+  <p-table
+    #dt1
+    [value]="agencias"
+    dataKey="id"
+    selectionMode="single"
+    [rows]="15"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[5, 10, 15]"
+    [rowHover]="true"
+    styleClass="p-datatable-sm p-datatable-gridlines"
+    [paginator]="true"
+    [globalFilterFields]="['name', 'code', 'description']"
+    responsiveLayout="scroll"
+    currentPageReportTemplate="Mostando {first} a {last} de {totalRecords} registros"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="codigo">
+          {{ labels.codigo }}<p-sortIcon field="name"></p-sortIcon>
+        </th>
+        <th pSortableColumn="descripcion">
+          {{ labels.descripcion }}<p-sortIcon field="description"></p-sortIcon>
+        </th>
+        <th pSortableColumn="direccion">
+          {{ labels.direccion }}<p-sortIcon field="price"></p-sortIcon>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-agencia rowIndex="rowIndex">
+      <tr [pSelectableRow]="agencia" (click)="selectAgencia(agencia)">
+        <td>{{ agencia.codigo }}</td>
+        <td>{{ agencia.descripcion }}</td>
+        <td>{{ agencia.direccion }}</td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr></tr>
+    </ng-template>
+    <ng-template pTemplate="loadingbody">
+      <tr></tr>
+    </ng-template>
+  </p-table>
+</section>
+
+<footer></footer>

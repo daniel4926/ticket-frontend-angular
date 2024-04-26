@@ -1,0 +1,21 @@
+<div *ngIf="mostrarContenido">
+  <div class="home-container">
+    <figure class="home_logo_container">
+      <img src="../../assets/img/logo-delpz-bl.png" alt="logo-delapaz">
+    </figure>
+
+    <h2 class="home_text">Distribuidora De Electricidad La Paz</h2>
+    <h3 class="home_text">{{ appName }}</h3>
+
+    <div class="home_buttons">
+      <button pButton pRipple icon="pi pi-user" class="p-button-rounded ml-2" (click)="redirectToLogin()" >Iniciar Sesión</button>
+      <button pButton pRipple icon="pi pi-user" class="p-button-rounded ml-2" >Dispensador</button>
+      <button pButton pRipple icon="pi pi-user" class="p-button-rounded ml-2" >Monitor</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!mostrarContenido" class="loading-container">
+  <h1 style="color: #87CEFA; font-style: italic;">Cargando...</h1>
+  <div class="spinner"></div>
+</div>

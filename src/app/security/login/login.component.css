@@ -1,0 +1,117 @@
+/* Estilos generales del contenedor de login */
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(rgb(22, 64, 80) 50%, rgb(19, 73, 55) 100%)
+}
+
+/* Estilos de la tarjeta de login */
+.login-card {
+  position: relative; /* Asegura que el z-index funcione correctamente */
+  z-index: 1; /* Asegura que la tarjeta esté sobre el fondo */
+  margin-top: 20px; /* Ajusta este valor según sea necesario para la separación */
+  padding: 2rem;
+  background: #fff; /* Cambia el color de fondo según el diseño original */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ancho ajustable según el diseño original */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para los títulos */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-group label {
+  position: relative;
+  display: block;
+  color: #333;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.full-width-input {
+  width: 100%;
+}
+.login-title {
+  text-align: center;
+  color: #333; /* Cambia el color del título según el diseño original */
+  margin-bottom: 2rem;
+}
+
+/* Estilos para el botón de submit */
+button[type="submit"] {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #032965; /* Cambia este valor al color que desees */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #17460A; /* Cambia este valor al color que desees para el hover */
+}
+
+
+.background-image {
+  position: relative; /* Cambia la posición a absoluta */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-img {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 30px; /* Ajusta este valor según el tamaño de tu icono */
+}
+
+.username-icon {
+  position: absolute;
+  top: 78%;
+  transform: translateY(-50%);
+  right: 10px; /* Ajusta este valor según la posición deseada */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 78%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.password-toggle-icon {
+  cursor: pointer;
+}
+
+

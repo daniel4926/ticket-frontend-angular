@@ -1,0 +1,14 @@
+<div class="container">
+  <app-header></app-header>
+
+  <div class="layout-main-container">
+    <app-sider-menu [menuItems]="menuItems"></app-sider-menu>
+    <div class="layout-content">
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+
+</div>

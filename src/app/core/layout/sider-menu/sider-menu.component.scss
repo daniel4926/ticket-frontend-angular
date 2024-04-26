@@ -1,0 +1,47 @@
+.sider-menu {
+  width: 240px;
+  height: 100%;
+  background-color: #D7DEE5;
+  color: #fff;
+  height: 100%;
+
+}
+
+.logo {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  color: #000;
+}
+
+.menu-items li {
+  margin-bottom: 10px;
+}
+
+.menu-items a {
+  display: block;
+  padding: 10px 20px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-items a:hover {
+  background-color: #528537;
+}
+
+.menu-items a .material-icons {
+  margin-right: 10px;
+}
+
+
+.menu-item {
+  color: red; /* Cambia el color del texto */
+}
+
+.menu-icon {
+  color: blue; /* Cambia el color del icono */
+}

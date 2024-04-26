@@ -1,0 +1,40 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  height: 100vh; /* Tamaño de la ventana del navegador */
+  background: linear-gradient(rgb(22, 64, 80) 50%, rgb(23, 41, 32) 100%)
+}
+
+.home_buttons {
+  margin-top: 20px; /* Margen superior para separar los botones */
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  height: 100vh; /* Tamaño de la ventana del navegador */
+  background-color: #575757; /* Color de fondo */
+}
+
+
+.home_text {
+  color: #fff;
+  text-align: center;
+
+}
+
+.p-button-raised {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.p-button-rounded {
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.p-button-icon-only {
+  width: 2.357rem;
+  padding: 0.5rem 0;
+}
